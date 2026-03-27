@@ -1,63 +1,30 @@
 # Spam Email Classification Using Machine Learning
 
-A complete end-to-end project for detecting spam email or SMS messages using natural language processing (NLP) and machine learning.
+A complete end-to-end project for detecting spam email or SMS messages using natural language processing (NLP) and machine learning.The main goal of this project is to classify emails as Spam or Not Spam (Ham) automatically using a trained machine learning model.
 
-## 🚀 Project Overview
+Spam emails are unwanted or harmful messages that may contain advertisements, scams, or malicious links. Machine learning algorithms can analyze email text and detect patterns to filter spam messages automatically.
 
-This repository implements a pipeline that:
-- Loads an SMS spam dataset
-- Cleans and preprocesses text data
-- Vectorizes text using TF-IDF
-- Trains a Naive Bayes classifier to detect spam vs ham
-- Saves the trained model and vectorizer for inference
-- Deploys a simple Streamlit web app (`app.py`) for live predictions
+This project demonstrates how text data can be processed, converted into numerical features, and used to train a classification model.
 
-## 📁 Repository Contents
+## 🚀 Features
 
-- `spam.csv` - dataset containing labeled messages (`spam` or `ham`)
-- `train.py` - training script (preprocess + fit model + save artifacts)
-- `app.py` - Streamlit application for prediction
-- `spam_model.pkl` - serialized trained model
-- `tfidf.pkl` - serialized TF-IDF transformer
-- `requirements.txt` - Python dependencies
-- `README.md` - project documentation
-- `Spam_Email_Classification.ipynb` / `Spam_Email_Classification_Project.ipynb` - exploratory notebooks
+- Detect spam emails automatically
+- Apply Machine Learning for text classification
+- Use NLP for text preprocessing
+- Train and test classification model
+- Improve accuracy of spam detection
 
-## 🛠️ Prerequisites
+The system uses supervised learning where emails are labeled as spam or not spam and the model learns from this data.
 
-- Python 3.8+
-- Git
+## 🛠️ Technologies Used
 
-## ⚙️ Setup
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/Meghashree54/Spam_Email_Classification_Using_Machine_Learning.git
-cd Spam_Email_Classification_Using_Machine_Learning
-```
-
-2. (Optional) Create a virtual environment:
-
-```bash
-python -m venv venv
-source venv/bin/activate   # Linux/macOS
-venv\Scripts\activate     # Windows
-```
-
-3. Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-## 🧠 Train the Model
-
-```bash
-python train.py
-```
-
-This will generate `spam_model.pkl` and `tfidf.pkl` in the project folder.
+- Python
+- Machine Learning
+- Scikit-learn
+- Pandas
+- NumPy
+- Natural Language Processing (NLP)
+- Jupyter Notebook / VS Code
 
 ## 🌐 Run the Streamlit App
 
@@ -65,20 +32,13 @@ This will generate `spam_model.pkl` and `tfidf.pkl` in the project folder.
 streamlit run app.py
 ```
 
+## 👉 Local Application 
+
+```bash
+http://localhost:8502
+```
+
 Open the local URL shown in terminal to test sample messages.
 
-## 🧾 File descriptions
 
-- `train.py` handles dataset loading, preprocessing, TF-IDF transformation, model training, evaluation, and artifact persistence.
-- `app.py` loads persisted artifacts and provides a web UI for entering text and receiving predictions.
-
-## 📌 Notes
-
-- You can fine-tune model performance by adjusting preprocessing/feature settings and trying different models (Logistic Regression, SVM, etc.).
-- If dataset is missing, re-run `train.py` after downloading a fresh SMS Spam Collection dataset.
-- This project is ideal for learning text classification and deploying a lightweight interactive app.
-
-## 🤝 License
-
-MIT License
 
